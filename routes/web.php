@@ -11,6 +11,14 @@
 |
 */
 
+
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
+
+
+
+
 Route::get('/', function () {
     return view('index');
 });
@@ -19,10 +27,6 @@ Route::get('/index', function () {
     return view('index');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-
-});
 
 Route::get('/services', function () {
     return view('services');
@@ -32,9 +36,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@home')->name('home');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', 'ContactController@index')->name('contact');
+
 
 
 Route::get('verifyEmailFirst','Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
