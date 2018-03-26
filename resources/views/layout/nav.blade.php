@@ -26,7 +26,7 @@
       <div class="container">
 
         <img style="margin-right: 10px;" src="{{ asset('img/bankicon.png') }}" height="50" width="50" alt="">
-        <a class="navbar-brand" href="/">Onze Bank</a>
+        <a class="navbar-brand" href="{{ route('index') }}">Onze Bank</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,7 +36,7 @@
               <a class="nav-link" href="about.html">About</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="/services">Services</a>
+              <a class="nav-link" href="{{ route('services') }}">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('contact') }}">Contact</a>

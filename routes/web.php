@@ -28,17 +28,15 @@ Route::get('/index', function () {
 });
 
 
-Route::get('/services', function () {
-    return view('services');
-});
-
 Auth::routes();
+
+Route::get('/services', 'ServicesController@index')->name('services');
 
 Route::get('/home', 'HomeController@home')->name('home');
 
+Route::get('/home', 'HomeController@index')->name('index');
+
 Route::get('/contact', 'ContactController@index')->name('contact');
-
-
 
 Route::get('verifyEmailFirst','Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
 
