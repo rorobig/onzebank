@@ -35,7 +35,6 @@
                               <td>€ {{$user->saldo}}</td>
                               <td>€ {{$user->saldo}}</td>
                             </tr>
-                           
                           </tbody>
                         </table>                                       
                             

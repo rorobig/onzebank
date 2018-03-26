@@ -21,9 +21,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function home($id)
+    public function home()
     {
-        $user = user::find($id)->saldo;
+        $user = user::find(27)->saldo;
+        // get saldo from saldo table where id =$id
         return view('home',compact('user'));
     }
 

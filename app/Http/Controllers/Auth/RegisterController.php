@@ -47,6 +47,9 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+    
+        // Contain at least one uppercase/lowercase letters and one number
+        // passowrd regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -67,9 +70,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        // Contain at least one uppercase/lowercase letters and one number
-        // passowrd regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/
-        Session::flash('status','Registered! but verify your email to activate your account');
+        Session::flash('status','Geregistreerd! maar verifieer uw email om uw account te activeren');
         $user= User::create([
             'name' => $data['name'],
             'lastname' => $data['lastname'],
@@ -80,6 +81,9 @@ class RegisterController extends Controller
         $thisUser = User::findorFail($user->id);
         $this->sendEmail($thisUser);
         return $user;
+
+
+        
     }
 
 

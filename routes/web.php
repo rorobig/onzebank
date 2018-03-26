@@ -30,7 +30,7 @@ Route::get('/services', function () {
 
 Auth::routes();
 
-Route::get('/home/{id}', 'HomeController@home')->name('home');
+Route::get('/home', 'HomeController@home')->name('home');
 
 Route::get('/contact', function () {
     return view('contact');
