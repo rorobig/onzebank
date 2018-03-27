@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $user = user::find(2)->saldo;
+        $user = user::find(14)->saldo;
         // get saldo from saldo table where id =$id
         return view('home',compact('user'));
     }
