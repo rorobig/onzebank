@@ -83,6 +83,7 @@ class RegisterController extends Controller
         ]);
         $thisUser = User::findorFail($user->id);
         $this->sendEmail($thisUser);
+        reutrn $thisUser;
     }
 
 
