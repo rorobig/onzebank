@@ -115,12 +115,11 @@ public function register(Request $request)
                 $user->status = 1;
                 $user->verifyToken = null;
                 $user->save();
-                return '1';
             }else{
                return 'user not found';
             }
 
-            return redirect()->route('home');
+            return redirect()->route('home')->with('status', 'Thankyou for verifying your email');
     }
 
 
