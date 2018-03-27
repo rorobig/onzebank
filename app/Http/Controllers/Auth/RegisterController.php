@@ -96,7 +96,7 @@ public function register(Request $request)
 
         event(new Registered($user = $this->create($request->all())));
 
-        return redirect(route('services'));
+        return redirect(route('login'));
         return $this->registered($request, $user)
                         ?: redirect($this->redirectPath());
     }
