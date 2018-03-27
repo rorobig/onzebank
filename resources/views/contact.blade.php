@@ -7,7 +7,7 @@
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="/">Home</a>
+          <a href="{{ url('/') }}">Home</a>
         </li>
         <li class="breadcrumb-item active">Contact</li>
       </ol>
@@ -28,7 +28,7 @@
             <br>
           </p>
           <p>
-            <abbr title="Phone">P</abbr>: (123) 456-7890
+            <abbr title="Phone">T</abbr>: (123) 456-7890
           </p>
           <p>
             <abbr title="Email">E</abbr>:
@@ -36,7 +36,7 @@
             </a>
           </p>
           <p>
-            <abbr title="Hours">H</abbr>: Maandag - Vrijdag: 9:00 AM to 5:00 PM
+            <abbr title="Hours">T</abbr>: Maandag - Vrijdag: 9:00 AM to 5:00 PM
           </p>
         </div>
       </div>

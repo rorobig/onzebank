@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('verifyToken');
             $table->boolean('status');
+            $table->string('iban');
+            $table->string('tnumber');
             $table->rememberToken();
             $table->timestamps();
         });

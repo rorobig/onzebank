@@ -56,6 +56,7 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/',
+            'iban'=> 'required|max:18',
         ]);
     }
 
@@ -70,7 +71,6 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        
         Session::flash('status','Geregistreerd! maar verifieer uw email om uw account te activeren');
         $user= User::create([
             'name' => $data['name'],
@@ -78,6 +78,8 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'verifyToken' => Str::random(40),
+            'iban' => $data['iban'],
+            'tnumber' => $data['tnumber'],
         ]);
         $thisUser = User::findorFail($user->id);
         $this->sendEmail($thisUser);

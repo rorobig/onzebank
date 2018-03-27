@@ -55,6 +55,37 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('iban') ? ' has-error' : '' }}">
+                            <label for="iban" class="col-md-4 control-label">IBAN</label>
+
+                            <div class="col-md-6">
+                                <input id="iban" type="text" maxlength="16" class="form-control" name="iban" value="{{ old('iban') }}" required>
+
+                                @if ($errors->has('iban'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('iban') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+
+                        <div class="form-group{{ $errors->has('tnumber') ? ' has-error' : '' }}">
+                            <label for="tnumber" class="col-md-4 control-label">Tel number</label>
+
+                            <div class="col-md-6">
+                                <input id="tnumber" type="number" class="form-control" name="tnumber" value="{{ old('tnumber') }}" required>
+
+                                @if ($errors->has('tnumber'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('tnumber') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
