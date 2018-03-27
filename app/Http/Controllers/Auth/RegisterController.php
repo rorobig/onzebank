@@ -113,7 +113,7 @@ public function register(Request $request)
             
             if ($user){
                 $user->status = 1;
-                $user->verifyToken => null;
+                $user->verifyToken = null;
                 $user->save();
                 return '1';
             }else{
