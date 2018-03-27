@@ -83,7 +83,6 @@ class RegisterController extends Controller
         ]);
         $thisUser = User::findorFail($user->id);
         $this->sendEmail($thisUser);
-        dd('hier 1');
     }
 
 
