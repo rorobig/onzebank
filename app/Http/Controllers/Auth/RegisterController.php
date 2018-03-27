@@ -115,6 +115,8 @@ public function register(Request $request)
             }else{
                return 'user not found';
             }
+
+            return redirect()->route('home');
     }
 
 
