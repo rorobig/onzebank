@@ -23,9 +23,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/index', function () {
-    return view('index');
-});
+// Route::get('/index', function () {
+//     return view('index');
+// });
 
 
 Auth::routes();
@@ -34,7 +34,7 @@ Route::get('/services', 'ServicesController@index')->name('services');
 
 Route::get('/home', 'HomeController@home')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('index');
+// Route::get('/home', 'HomeController@returnhome')->name('returnhome');
 
 Route::get('/contact', 'ContactController@index')->name('contact');
 

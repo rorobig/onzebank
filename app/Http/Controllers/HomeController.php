@@ -23,13 +23,18 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $user = user::find(27)->saldo;
+        $user = user::find(2)->saldo;
         // get saldo from saldo table where id =$id
         return view('home',compact('user'));
     }
 
-    public function index()
+
+    public function returnhome()
     {
-        return view('index');
+         return view('index');
     }
+    // public function index()
+    // {
+    //     return view('index');
+    // }
 }
