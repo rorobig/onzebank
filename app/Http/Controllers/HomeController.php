@@ -25,8 +25,10 @@ class HomeController extends Controller
     public function home()
     {
         $user = Auth::user();
+
         // get saldo from saldo table where id =$id
-        return view('home',compact('user'));
+        // return view('home',compact('user'));
+        return view('home', ['user' => $user]);
     }
 
 

@@ -32,8 +32,8 @@
                                  {!!"<br>"!!}
                                  Studenten account
                               </td>
-                              <td>€ {{$user->saldo}}</td>
-                              <td>€ {{$user->saldo}}</td>
+                              <td>€ {{$user->saldo->saldo}}</td>
+                              <td>€ {{$user->saldo->saldo}}</td>
                             </tr>
                           </tbody>
                         </table>                                       

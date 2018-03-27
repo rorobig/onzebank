@@ -119,7 +119,7 @@ public function register(Request $request)
                return 'user not found';
             }
 
-            return redirect()->route('home')->with('status', 'Thankyou for verifying your email');
+            return redirect()->route('login');
     }
 
 
