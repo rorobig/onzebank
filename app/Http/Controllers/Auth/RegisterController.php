@@ -110,6 +110,7 @@ public function register(Request $request)
     public function sendEmailDone($email,$verifyToken)
     {
             $user = User::where(['email'=> $email, 'verifyToken'=>$verifyToken])->first();
+            dd($user);
             if ($user){
                 $user->update(['status'=>1,'verifyToken'=> null]);
             }else{
