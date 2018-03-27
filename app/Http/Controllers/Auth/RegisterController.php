@@ -111,7 +111,7 @@ public function register(Request $request)
     {
             $user = User::where(['email'=> $email, 'verifyToken'=>$verifyToken])->first();
             if ($user){
-             return $user->update(['status'=>1,'verifyToken'=> null]);
+                $user->update(['status'=>1,'verifyToken'=> null]);
             }else{
                return 'user not found';
             }
