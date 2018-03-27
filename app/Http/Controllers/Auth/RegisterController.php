@@ -82,8 +82,8 @@ class RegisterController extends Controller
             'tnumber' => $data['tnumber'],
         ]);
         $thisUser = User::findorFail($user->id);
-        dd($user);
         $this->sendEmail($thisUser);
+        dd('hier 1');
     }
 
 
