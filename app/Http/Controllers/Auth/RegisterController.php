@@ -83,10 +83,6 @@ class RegisterController extends Controller
         ]);
         $thisUser = User::findorFail($user->id);
         $this->sendEmail($thisUser);
-        return $user;
-
-
-        
     }
 
 
@@ -99,7 +95,7 @@ class RegisterController extends Controller
     {
             $user = User::where(['email'=> $email, 'verifyToken'=>$verifyToken])->first();
             if ($user){
-             return User::where(['email'=> $email, 'verifyToken'=>$verifyToken])->update(['status'=>'1','verifyToken'=>NULL]);
+             return $user->update(['status'=>'1','verifyToken'=> null]);
             }else{
                return 'user not found';
             }

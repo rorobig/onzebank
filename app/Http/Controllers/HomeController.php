@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\user;
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -23,7 +24,7 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $user = user::find(10)->saldo;
+        $user = Auth::user();
         // get saldo from saldo table where id =$id
         return view('home',compact('user'));
     }
