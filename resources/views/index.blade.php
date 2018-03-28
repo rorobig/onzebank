@@ -46,9 +46,9 @@
 
       <!-- Marketing Icons Section -->
       <div class="row">
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-4 mb-4 col-sm-5 col-xl-4">
           <div class="card h-100" style="width: 18rem;">
-             <img class="card-img-top" src="{{ asset('img/lod1.jpg')}}" alt="Card image cap">
+             <img class="card-img-top img-fluid rounded" src="{{ asset('img/lod1.jpg')}}" alt="Card image cap">
               <div class="card-body">
               <h5 class="card-title">Meer uit uw geld halen?</h5>
               <p class="card-text">Door te beleggen, heeft u de kans om uw geld sneller te laten groeien. Zeker op de lange termijn. Zien wat het u kan opleveren? Ontdek het in 3 korte stappen.</p>
@@ -56,9 +56,9 @@
            </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-4 mb-4 col-sm-5 col-xl-4">
            <div class="card h-100" style="width: 18rem;">
-             <img class="card-img-top" src="{{ asset('img/lod2.png')}}" alt="Card image cap">
+             <img class="card-img-top img-fluid rounded" src="{{ asset('img/lod2.png')}}" alt="Card image cap">
               <div class="card-body">
               <h5 class="card-title">Wat kan beleggen opleveren?
 </h5>
@@ -68,9 +68,9 @@
            </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-4 mb-4 col-sm-5 col-xl-4">
            <div class="card h-100" style="width: 18rem;">
-             <img class="card-img-top" src="{{ asset('img/lod3.png')}}" alt="Card image cap">
+             <img class="card-img-top img-fluid rounded" src="{{ asset('img/lod3.png')}}" alt="Card image cap">
               <div class="card-body">
               <h5 class="card-title">Kopen om te verhuren
                </h5>

@@ -6,6 +6,7 @@
   <h1> Welcome,{{ Auth::user()->name.' '.Auth::user()->lastname  }}</h1> 
   <p>Last login: {{ date("d-m-Y")." ".date("h:i:sa")}}</p> 
 </div>
+<br>
     <div class="row">
         <div class="col-md-8 ">
             <div class="panel panel-default">
@@ -41,8 +42,11 @@
                 </div>
             </div>
         </div>
+
          <div class="col-md-4 ">
+
             <div class="panel panel-default">
+
                 <div class="panel-heading">Wisselkoersen</div>
                 <div class="panel-body">
                     @if (session('status'))
